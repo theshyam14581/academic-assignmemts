@@ -1,0 +1,22 @@
+[
+
+     {
+         "title": "Total Assignments",
+         "count": 16,
+         "color": "text-orange-500",
+         "bg": "bg-orange-50"
+     },
+     {
+         "title": "Submitted Assignments",
+         "count": 8,
+         "color": "text-green-600",
+         "bg": "bg-green-50"
+     },
+     {
+         "title": "Pending Assignments",
+         "count": 4,
+         "color": "text-pink-600",
+         "bg": "bg-pink-50"
+     }
+]
+

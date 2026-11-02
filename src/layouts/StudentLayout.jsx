@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import StudentNavbar from "../components/StudentNavbar";
 
-const StudentLayout = () => {
+const StudentLayout = ({ children }) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <div className="min-h-screen bg-gray-50">
+      <StudentNavbar />
 
-export default StudentLayout
+      <main className="p-6">
+        {children}
+      </main>
+    </div>
+  );
+};
+
+export default StudentLayout;

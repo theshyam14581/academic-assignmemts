@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ManageTeachers = () => {
+const Assignments = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ManageTeachers = () => {
   )
 }
 
-export default ManageTeachers
+export default Assignments
