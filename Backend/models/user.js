@@ -1,22 +1,19 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required:true
-    },
-    email:{
+const pdfSchema = new mongoose.Schema({
+    title:{
         type:String,
         required:true,
-        unique:true,
-        lowercase:true,
         trim:true
     },
-    password:{
-        type:String,
+    pdf:{
+        type:Buffer,
         required:true
     },
-    timestamps:true
+    contenttype:{
+        type:String,
+        default:"application/pdf"
+    }
 });
 
-module.exports = mongoose.model("user",userSchema)
+module.exports = mongoose.model("pdf",pdfSchema)
