@@ -1,24 +1,32 @@
 
-import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import StudentLayout from "./layouts/StudentLayout";
+import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
 import Dashboard from "./pages/students/Dashboard";
+import StudentLayout from "./layouts/StudentLayout";
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
-      <StudentLayout>
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </StudentLayout>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/signup" element={<Signup />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <StudentLayout>
+              <Dashboard />
+            </StudentLayout>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default App;
